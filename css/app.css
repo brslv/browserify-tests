@@ -1,0 +1,76 @@
+html, body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    margin-left: -250px;
+    margin-top: -250px;
+    background: #f9f9f9;
+    border: 3px solid #ccc;
+}
+
+#wrapper h2 {
+    text-align: center;
+    position: relative;
+}
+
+.round {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#toggle {
+    width: 80px;
+    height: 30px;
+    background: #eee;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: -15px;
+    display: block;
+    cursor: pointer;
+    transition: background 0.5s;
+    transition: border 0.5s;
+}
+
+#toggle:active,
+#toggle:hover {
+    background: #ccc;
+}
+
+#toggle.off {
+    border: 1px solid darkred;
+    background: indianred;
+}
+
+#toggle.on {
+    border: 1px solid darkgreen;
+    background: lightgreen;
+}
+
+#innerToggle {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: all 0.3s;
+}
+
+#toggle.on #innerToggle {
+    background: darkgreen;
+    transform: translate(50px, 0);
+}
+
+#toggle.off #innerToggle {
+    background: darkred;
+}
